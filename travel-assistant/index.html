@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <title>旅遊助手</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+  <link rel="manifest" href="manifest.json" />
+</head>
+<body>
+
+<header>
+  <h1>旅遊助手</h1>
+  <select id="lang">
+    <option value="zh">中文</option>
+    <option value="en">English</option>
+  </select>
+</header>
+
+<main>
+  <!-- 行程卡片 -->
+  <section id="itinerary">
+    <h2>今日行程</h2>
+    <div class="card">
+      <p>09:00 淺草寺</p>
+      <p>13:00 晴空塔</p>
+      <p>18:00 秋葉原</p>
+    </div>
+  </section>
+
+  <!-- 天氣 -->
+  <section class="card">
+    <h2>天氣</h2>
+    <p>☀️ 25°C</p>
+  </section>
+
+  <!-- 地圖 -->
+  <section class="card">
+    <h2>地圖導航</h2>
+    <a href="https://www.google.com/maps" target="_blank">開啟 Google 地圖</a>
+  </section>
+</main>
+
+<script src="app.js"></script>
+</body>
+</html>
