@@ -1,0 +1,141 @@
+:root {
+  --primary: #222;
+  --bg: #FAFAF7;
+  --card: #ffffff;
+  --accent: #3498db;
+  --danger: #e74c3c;
+}
+
+body {
+  font-family: 'Noto Sans JP', sans-serif;
+  background: var(--bg);
+  color: #222;
+  margin: 0;
+  padding-bottom: 40px;
+}
+
+header {
+  padding: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #fff;
+  border-bottom: 1px solid #eee;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+h1 { font-size: 18px; margin: 0; }
+
+main { padding: 16px; max-width: 500px; margin: auto; }
+
+.card {
+  background: var(--card);
+  padding: 16px;
+  border-radius: 16px;
+  margin-bottom: 16px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+.card h2 { font-size: 16px; margin-top: 0; display: flex; justify-content: space-between; }
+
+input, select {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  box-sizing: border-box;
+}
+
+.btn-group { display: flex; gap: 8px; }
+
+button {
+  flex: 1;
+  padding: 12px;
+  border-radius: 8px;
+  border: none;
+  background: var(--primary);
+  color: #fff;
+  font-weight: 500;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+button:active { opacity: 0.7; }
+
+.btn-outline { background: #eee; color: #333; }
+
+/* Day Tabs Dynamic */
+.day-tabs {
+  display: flex;
+  gap: 8px;
+  overflow-x: auto;
+  padding-bottom: 8px;
+  margin-bottom: 12px;
+}
+
+.day-tabs button {
+  min-width: 80px;
+  white-space: nowrap;
+  background: #fff;
+  color: #666;
+  border: 1px solid #ddd;
+}
+
+.day-tabs button.active {
+  background: var(--primary);
+  color: #fff;
+  border-color: var(--primary);
+}
+
+/* Itinerary Items */
+.itinerary-item {
+  background: #f9f9f9;
+  border-radius: 8px;
+  margin-bottom: 8px;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.item-main {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.drag-handle { cursor: grab; color: #ccc; }
+
+.place-name {
+  flex: 1;
+  font-weight: 500;
+  font-size: 15px;
+  color: var(--accent);
+  text-decoration: underline;
+  cursor: pointer;
+  
+  /* --- FIX: Handle long text --- */
+  white-space: nowrap;      /* Prevent text from wrapping to the next line */
+  overflow: hidden;         /* Hide the parts that don't fit */
+  text-overflow: ellipsis;  /* Add the "..." symbol */
+  min-width: 0;             /* Important: allows flex children to shrink */
+}
+
+.note-input {
+  font-size: 12px;
+  border: none;
+  background: transparent;
+  color: #666;
+  padding: 4px 0;
+  margin: 0;
+  border-bottom: 1px dashed #ddd;
+}
+
+.delete-btn { color: #aaa; background: none; width: auto; padding: 0 5px; font-size: 18px; }
+
+/* Currency Widget */
+.currency-flex { display: flex; align-items: center; gap: 8px; }
+

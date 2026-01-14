@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>旅遊助手 v2.0</title>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyByHmLJTyobrL2u8kjPmK-mDtD2JqR2Elc&libraries&libraries=places&language=zh-TW"></script>
+</head>
+<body>
+
+<header>
+  <h1>🧳 旅遊助手 Pro</h1>
+  <button class="btn-outline" style="width:auto; padding:5px 10px;" onclick="exportData()">分享/備份</button>
+</header>
+
+<main>
+  <!-- Search -->
+  <section class="card">
+    <h2>新增行程</h2>
+    <input id="placeInput" type="text" placeholder="搜尋景點、飯店...">
+    <button id="addPlace">加入今日清單</button>
+  </section>
+
+  <!-- Itinerary -->
+  <section id="itinerarySection">
+    <div id="dayTabs" class="day-tabs"></div>
+    <div class="card">
+      <div id="itineraryList"></div>
+    </div>
+  </section>
+
+  <!-- Tools -->
+  <section class="card">
+    <h2>匯率換算 (TWD → JPY)</h2>
+    <div class="currency-flex">
+      <input type="number" id="amount" placeholder="金額" oninput="convertCurrency()">
+      <span id="res">≈ 0 JPY</span>
+    </div>
+  </section>
+
+  <section class="card">
+    <h2>實用工具</h2>
+    <div class="btn-group">
+      <button class="btn-outline" onclick="window.open('https://www.google.com/maps')">地圖</button>
+      <button class="btn-outline" onclick="window.open('https://translate.google.com')">翻譯</button>
+    </div>
+  </section>
+</main>
+
+<script src="app.js"></script>
+</body>
+</html>
